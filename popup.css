@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin:     0;
+  padding:    0;
+}
+
+body {
+  font-family:      -apple-system, Arial, sans-serif;
+  width:            240px;
+  background:       #f8fafc;
+  color:            #111827;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+  display:     flex;
+  align-items: center;
+  gap:         10px;
+  padding:     14px 14px 12px;
+  background:  #ffffff;
+}
+
+.header-icon {
+  font-size:      20px;
+  width:          36px;
+  height:         36px;
+  background:     #1d4ed8;
+  border-radius:  9px;
+  display:        flex;
+  align-items:    center;
+  justify-content: center;
+  flex-shrink:    0;
+}
+
+.header-title {
+  font-size:   13px;
+  font-weight: 700;
+  color:       #111827;
+  line-height: 1.2;
+}
+
+.header-sub {
+  font-size:   10px;
+  font-weight: 500;
+  color:       #6b7280;
+  margin-top:  1px;
+}
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.divider {
+  height:     1px;
+  background: #e5e7eb;
+}
+
+/* =====================================================
+   SECTION LABEL
+===================================================== */
+
+.section-label {
+  font-size:      9px;
+  font-weight:    700;
+  letter-spacing: 0.08em;
+  color:          #9ca3af;
+  padding:        10px 14px 6px;
+}
+
+/* =====================================================
+   TOGGLE LIST
+===================================================== */
+
+.toggle-list {
+  padding:        0 10px 10px;
+  display:        flex;
+  flex-direction: column;
+  gap:            2px;
+}
+
+/* =====================================================
+   TOGGLE ROW
+===================================================== */
+
+.toggle-row {
+  display:       flex;
+  align-items:   center;
+  justify-content: space-between;
+  padding:       7px 6px;
+  border-radius: 8px;
+  cursor:        pointer;
+  transition:    background 0.12s ease;
+  user-select:   none;
+}
+
+.toggle-row:hover {
+  background: #f1f5f9;
+}
+
+.toggle-label {
+  display:     flex;
+  align-items: center;
+  gap:         8px;
+  font-size:   12px;
+  font-weight: 500;
+  color:       #374151;
+}
+
+.toggle-icon {
+  font-size:  14px;
+  width:      20px;
+  text-align: center;
+}
+
+/* =====================================================
+   TOGGLE SWITCH
+===================================================== */
+
+.toggle-wrap {
+  position:    relative;
+  flex-shrink: 0;
+}
+
+.toggle-wrap input {
+  position: absolute;
+  opacity:  0;
+  width:    0;
+  height:   0;
+}
+
+.toggle-slider {
+  display:       block;
+  width:         34px;
+  height:        19px;
+  background:    #d1d5db;
+  border-radius: 999px;
+  position:      relative;
+  transition:    background 0.2s ease;
+}
+
+.toggle-slider::after {
+  content:       '';
+  position:      absolute;
+  top:           2px;
+  left:          2px;
+  width:         15px;
+  height:        15px;
+  background:    #ffffff;
+  border-radius: 50%;
+  transition:    transform 0.2s ease;
+  box-shadow:    0 1px 3px rgba(0,0,0,0.2);
+}
+
+.toggle-wrap input:checked + .toggle-slider {
+  background: #1d4ed8;
+}
+
+.toggle-wrap input:checked + .toggle-slider::after {
+  transform: translateX(15px);
+}

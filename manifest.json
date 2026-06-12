@@ -1,0 +1,58 @@
+{
+"manifest_version": 3,
+"name": "Gmail QA",
+"version": "12.0.0",
+"description": "Analyze SPF, DKIM, DMARC, Message-ID, unsubscribe links, tracking pixels and email authentication inside Gmail.",
+
+"host_permissions": [
+"https://mail.google.com/*"
+],
+
+"content_scripts": [
+{
+"matches": [
+"https://mail.google.com/*"
+],
+"js": [
+"content.js",
+"links.js"
+],
+"css": [
+"styles.css",
+"links.css"
+],
+"run_at": "document_idle"
+}
+],
+
+"web_accessible_resources": [
+{
+"resources": [
+"inject.js"
+],
+"matches": [
+"https://mail.google.com/*"
+]
+}
+],
+
+"permissions": [
+"storage"
+],
+
+"icons": {
+"16": "icon16.png",
+"48": "icon48.png",
+"128": "icon128.png"
+},
+
+"action": {
+"default_popup": "popup.html",
+"default_title": "Gmail QA Settings",
+"default_icon": {
+"16": "icon16.png",
+"48": "icon48.png",
+"128": "icon128.png"
+}
+}
+}

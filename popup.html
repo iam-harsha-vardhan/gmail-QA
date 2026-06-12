@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-icon">✉</div>
+    <div class="header-text">
+      <div class="header-title">Gmail QA Parser</div>
+      <div class="header-sub">Deliverability Inspector</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">SHOW IN PANEL</div>
+
+  <div class="toggle-list">
+
+    <label class="toggle-row">
+      <span class="toggle-label">
+        <span class="toggle-icon">🪪</span>
+        Message-ID
+      </span>
+      <div class="toggle-wrap">
+        <input type="checkbox" id="msgid">
+        <span class="toggle-slider"></span>
+      </div>
+    </label>
+
+    <label class="toggle-row">
+      <span class="toggle-label">
+        <span class="toggle-icon">🖼</span>
+        Logo
+      </span>
+      <div class="toggle-wrap">
+        <input type="checkbox" id="logo">
+        <span class="toggle-slider"></span>
+      </div>
+    </label>
+
+    <label class="toggle-row">
+      <span class="toggle-label">
+        <span class="toggle-icon">👁</span>
+        Open Pixel
+      </span>
+      <div class="toggle-wrap">
+        <input type="checkbox" id="pixel">
+        <span class="toggle-slider"></span>
+      </div>
+    </label>
+
+    <label class="toggle-row">
+      <span class="toggle-label">
+        <span class="toggle-icon">🚫</span>
+        Unsubscribe
+      </span>
+      <div class="toggle-wrap">
+        <input type="checkbox" id="unsub">
+        <span class="toggle-slider"></span>
+      </div>
+    </label>
+
+    <label class="toggle-row">
+      <span class="toggle-label">
+        <span class="toggle-icon">📋</span>
+        List-Unsub
+      </span>
+      <div class="toggle-wrap">
+        <input type="checkbox" id="listunsub">
+        <span class="toggle-slider"></span>
+      </div>
+    </label>
+
+  </div>
+
+<script src="popup.js"></script>
+</body>
+</html>
